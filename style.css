@@ -1,0 +1,73 @@
+html {
+  font-size: 10px; /* Base font size for the whole page */
+  background: url('./backgroundimage3.jpg') bottom center;
+  background-size: cover;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#pokemon-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Ensures vertical centering */
+  width: 100%;          /* Ensures the container takes full width */
+  margin-top: 2rem;     /* Adds some space from the top of the page */
+  margin-bottom: 2rem;  /* Space before the keys */
+}
+
+#pokemon-image {
+  max-width: 80%;       /* Limit max width to avoid too large images on big screens */
+  height: auto;         /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for transformations */
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .1s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+@media (max-width: 768px) {
+  #pokemon-image {
+      max-width: 90%;   /* Allows the image to be larger on smaller screens */
+  }
+}
